@@ -159,6 +159,18 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 </style>
 
 <style>
+/* Запрет переносов для конкретного слова на мобильных */
+@media (max-width: 767px) {
+  .no-break {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: manual !important; /* игнорировать авто-дефисы */
+  }
+}
+</style>
+
+<style>
 /* Адаптив текста отзывов */
 .testimonials_slider blockquote {
   display: block;
@@ -517,7 +529,7 @@ var LS_Meta = {"v":"6.11.8","fixGSAP":"1"};
 </div><div class="column mcb-column mcb-item-e77d54348 one column_placeholder"><div class="placeholder">&nbsp;</div></div></div></div><div class="wrap mcb-wrap mcb-wrap-0knns7unq one-second  valign-middle clearfix" style="padding:100px 7% 110px"  ><div class="mcb-wrap-inner"><div class="column mcb-column mcb-item-fj8t73mdy one column_column"><div class="column_attr clearfix" style=""><h6><sup>2</sup>/<sub style="margin-right:15px">6</sub> обо мне</h6>
 <hr class="no_line" style="margin: 0 auto 10px auto"/>
 
-<h2 style="word-wrap: break-word;hyphens: auto;line-height: 1.2;font-size: 23px;color: #132340;">Моя область — это НЕЙРОПСИХОЛОГИЯ.</h2><hr class="no_line" style="margin: 0 auto 30px auto"/>
+<h2 style="word-wrap: break-word;hyphens: auto;line-height: 1.2;font-size: 23px;color: #132340;">Моя область — это <span class="no-break">НЕЙРОПСИХОЛОГИЯ</span>.</h2><hr class="no_line" style="margin: 0 auto 30px auto"/>
 
 
 <p style="color: #132340;"><strong>Меня зовут Юлия, я психолог-исследователь и наставник.
