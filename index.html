@@ -196,6 +196,23 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 <link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min.css%3Fver=5.8.11.css' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='wp-content/plugins/contact-form-7/includes/css/styles.css%3Fver=5.5.3.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mfn-be-css'  href='wp-content/themes/betheme/css/be.css%3Fver=24.0.3.1.css' type='text/css' media='all' />
+
+<style>
+/* Mobile-only fixed height for Revolution Slider */
+@media (max-width: 767px) {
+  #rev_slider_19_1_wrapper,
+  #rev_slider_19_1,
+  #rev_slider_19_1 .rs-slides,
+  #rev_slider_19_1 rs-slides,
+  #rev_slider_19_1 .rev-slidebg,
+  #rev_slider_19_1 canvas.rs-progress-bar,
+  #rev_slider_19_1_wrapper canvas {
+    
+    max-height: 300px !important;
+  }
+  #rev_slider_19_1_wrapper { overflow: hidden !important; }
+}
+</style>
 <link rel='stylesheet' id='mfn-animations-css'  href='wp-content/themes/betheme/assets/animations/animations.min.css%3Fver=24.0.3.1.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mfn-font-awesome-css'  href='wp-content/themes/betheme/fonts/fontawesome/fontawesome.css%3Fver=24.0.3.1.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mfn-jplayer-css'  href='wp-content/themes/betheme/assets/jplayer/css/jplayer.blue.monday.css%3Fver=24.0.3.1.css' type='text/css' media='all' />
@@ -350,8 +367,8 @@ var LS_Meta = {"v":"6.11.8","fixGSAP":"1"};
 
 			<header id="Header"><div class="mfn-main-slider mfn-rev-slider" style="background-image: url('bg-large-hero-tablet.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 			<!-- START hairdresser3 REVOLUTION SLIDER 6.5.4 --><p class="rs-p-wp-fix"></p>
-			<rs-module-wrap id="rev_slider_19_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-				<rs-module id="rev_slider_19_1" style="" data-version="6.5.4">
+            <rs-module-wrap id="rev_slider_19_1_wrapper" data-source="gallery" style="visibility:visible;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;overflow:hidden;">
+                <rs-module id="rev_slider_19_1" style="width:100%;" data-version="6.5.4">
 					<rs-slides>
 						<rs-slide data-key="rs-49" data-title="Slide" data-in="o:0;" data-out="a:false;">
 							<img src="wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="Slide" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//asyagerz.ru/wp-content/plugins/revslider/public/assets/assets/transparent.png" data-parallax="off" data-no-retina>
@@ -366,9 +383,7 @@ var LS_Meta = {"v":"6.11.8","fixGSAP":"1"};
 								data-frame_999="o:0;st:w;"
 								style="z-index:9;"
 							><rs-bg-elem style="position:absolute; top:0px;left:0px;"></rs-bg-elem>
-							<img src="1.jpg" class="tp-rs-img" width="1000" height="1200" loading="eager" data-no-retina="" data-reference="1.jpg" data-src-rs-ref="1.jpg" style="position: relative; width: 100%; height: auto; object-fit: contain;">
-							</rs-layer><!--
--->						</rs-slide>
+							<img src="1.jpg" class="tp-rs-img" width="1000" height="1200" loading="eager" data-no-retina="" data-reference="1.jpg" data-src-rs-ref="http://127.0.0.1:5500/1.jpg" style="transform: scale(-1, 1);width: 100%;height: 100%;position: relative;">-->						</rs-slide>
 					</rs-slides>
 					<rs-static-layers><!--
 
@@ -482,7 +497,7 @@ var LS_Meta = {"v":"6.11.8","fixGSAP":"1"};
 					--></rs-static-layers>
 				</rs-module>
 				<script type="text/javascript">
-					setREVStartSize({c: 'rev_slider_19_1',rl:[1240,1240,778,778],el:[900,900,700,700],gw:[1340,1340,778,778],gh:[900,900,700,700],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
+                    setREVStartSize({c: 'rev_slider_19_1',rl:[1240,1240,778,778],el:[900,900,700,300],gw:[1340,1340,778,778],gh:[900,900,700,300],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
 				</script>
 			</rs-module-wrap>
 			<!-- END REVOLUTION SLIDER -->
